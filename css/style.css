@@ -25,7 +25,7 @@ header form {
     background-position: bottom;
 }
 
-.company-name a > img {
+.company-name nav > a > img {
     position: absolute;
     top: 24px;
     left: 16.2%;
@@ -101,6 +101,17 @@ header .nav-justified .nav-link {
     .nav-justified .nav-link {
         margin-bottom: 0;
     }
+}
+
+.navbar-toggler {
+    cursor: pointer;
+    border: 1px solid #fff !important;
+    margin: 20px;
+}
+
+.navbar-toggler i {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
 }
 
 .carousel-control-next img,
@@ -352,16 +363,18 @@ button.main-button {
     position: relative;
     margin: 0 auto;
 }
+
 .call-back form {
-	margin-top: -10px;
+    margin-top: -10px;
 }
+
 .call-back form img {
-	width: 18%;
-	margin-right: 15px;
+    width: 18%;
+    margin-right: 15px;
 }
 
 .call-back form input {
-	width: 14%;
+    width: 14%;
     margin-right: 20px;
     padding: 10px;
     font-size: 10px;
@@ -443,4 +456,25 @@ footer a > img {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+}
+
+@media (max-width: 767px) {
+    .navbar-fixed-top-small {
+        position: fixed;
+        right: 0;
+        left: 0;
+        top: 10px;
+        z-index: 1030;
+    }
+    .company-name nav > a > img {
+        position: absolute;
+        top: -10px;
+        left: auto;
+        right: 0px;
+    }
+    .company-name h1 {
+        margin-top: 130px;
+        padding-bottom: 100px;
+        margin-bottom: 0;
+    }
 }
