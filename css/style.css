@@ -1,0 +1,446 @@
+@font-face {
+    font-family: "IzhitsaCRegular";
+    src: url("../fonts/IzhitsaCRegular/IzhitsaCRegular.eot");
+    src: url("../fonts/IzhitsaCRegular/IzhitsaCRegular.eot?#iefix")format("embedded-opentype"), url("../fonts/IzhitsaCRegular/IzhitsaCRegular.woff") format("woff"), url("../fonts/IzhitsaCRegular/IzhitsaCRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+header,
+main h2 {
+    font-family: "IzhitsaCRegular";
+}
+
+header nav {
+    background: #a91521;
+}
+
+header form {
+    text-align: center;
+}
+
+.company-name {
+    background-image: url('../img/bg-header.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.company-name a > img {
+    position: absolute;
+    top: 24px;
+    left: 16.2%;
+}
+
+.company-name h1 {
+    text-align: center;
+    margin-top: 47px;
+    margin-bottom: 37px;
+    font-size: 32px;
+}
+
+.contacts {
+    position: absolute;
+    top: 45px;
+    right: 12%;
+    z-index: 10;
+    color: #000;
+    background: url(../img/bg-contacts-header.png) no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    padding: 37px 34px;
+    line-height: 1.75;
+}
+
+.contacts a,
+.contacts a:hover {
+    color: #000;
+}
+
+.contacts i {
+    color: #a91521;
+    margin-right: 5px;
+}
+
+.contacts a:hover {
+    text-decoration: underline;
+}
+
+
+/* add .nav-justified, see: https://github.com/twbs/bootstrap/issues/18653 */
+
+.nav-justified {
+    padding-right: 0 !important;
+    width: 46%;
+    margin-left: 27%;
+}
+
+.nav-justified .nav-item {
+    float: none;
+}
+
+.nav-justified .nav-link {
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+header .nav-justified .nav-link {
+    padding: 20px 0;
+    color: #fff;
+}
+
+.nav-justified .nav-link:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .nav-justified .nav-item {
+        display: table-cell;
+        width: 1%;
+    }
+    .nav-justified .nav-link {
+        margin-bottom: 0;
+    }
+}
+
+.carousel-control-next img,
+.carousel-control-prev img {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 45%;
+    left: 20px;
+}
+
+.carousel-control-next img {
+    left: auto;
+    right: 20px;
+    transform: rotate(180deg);
+}
+
+.carousel-item .carousel-caption {
+    background: rgba(232, 232, 232, .8);
+    border-radius: 5px;
+    color: #e11c16;
+    font-size: 26px;
+    position: absolute;
+    top: 45%;
+    left: 24%;
+    width: 51%;
+    padding: 37px 0;
+    height: 100px;
+}
+
+.carousel-indicators {
+    bottom: -35px !important;
+}
+
+.carousel-indicators li {
+    width: 25px !important;
+    height: 25px !important;
+    background-color: #dd2904 !important;
+    border: 1px solid #dd2904 !important;
+    border-radius: 15px !important;
+    margin: auto !important;
+}
+
+.carousel-indicators .active {
+    background-color: #a91521 !important;
+    margin: auto !important;
+}
+
+main h2 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 6px;
+    font-size: 27px;
+}
+
+button.main-button {
+    color: #fff;
+    padding: 5px 10px;
+    background: #a91521;
+    border: 1px solid #a91521;
+}
+
+.about-us div.first-letter {
+    line-height: 1.6;
+    margin-top: 25px;
+}
+
+.about-us div.first-letter::first-letter {
+    font-family: "IzhitsaCRegular";
+    font-size: 30px;
+    color: #a91521;
+    line-height: .5;
+}
+
+.about-us div.first-letter:after,
+.reviews .user:before {
+    content: url("../img/divider.png");
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.about-us form {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.about-us form input {
+    width: 29%;
+    border: 1px solid #787171;
+    padding: 5px;
+}
+
+.proposal {
+    background-image: url('../img/bg-hohloma.png');
+    background-size: cover;
+    margin-bottom: -10px;
+}
+
+.proposal a,
+.proposal a:hover {
+    color: #000;
+}
+
+.proposal a:hover {
+    text-decoration: underline;
+}
+
+.proposal h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.proposal .slider-text {
+    padding-top: 15px;
+    line-height: 1.44;
+}
+
+.proposal .row {
+    margin-top: 10px;
+}
+
+.proposal .carousel-control-next,
+.proposal .carousel-control-prev {
+    position: absolute;
+    top: 38%;
+    left: -20px;
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+}
+
+.proposal .carousel-control-next {
+    left: auto;
+    right: -20px;
+}
+
+.proposal .carousel-inner {
+    border-image: url(../img/main-slider-border.png);
+    border-style: solid;
+    border-width: 30px;
+    -moz-border-image: url(../img/border-test.png) 30 round;
+    -webkit-border-image: url(../img/border-test.png) 30 round;
+    -o-border-image: url(../img/border-test.png) 30 round;
+    border-image: url(../img/border-test.png) 30 round;
+}
+
+.FAQ h2 {
+    margin-top: 55px;
+}
+
+.FAQ h4 {
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.FAQ h4:after {
+    content: url("../img/question-mark-rhoumb.png");
+    display: block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.FAQ button {
+    margin-top: 33px;
+}
+
+.answer,
+.question {
+    padding: 5px;
+}
+
+.answer,
+.question,
+.news-block {
+    border-image: url(../img/question-border.png);
+    border-style: solid;
+    border-width: 20px;
+    -moz-border-image: url(../img/question-border.png) 20 round;
+    -webkit-border-image: url(../img/question-border.png) 20 round;
+    -o-border-image: url(../img/question-border.png) 20 round;
+    border-image: url(../img/question-border.png) 20 round;
+}
+
+.FAQ img:first-of-type {
+    position: absolute;
+    left: 18%;
+}
+
+.FAQ img:nth-of-type(2) {
+    position: absolute;
+    right: 18%;
+}
+
+.news {
+    background-image: url('../img/bg-hohloma-2.png');
+    background-size: cover;
+}
+
+.news h2 {
+    margin-bottom: 25px;
+}
+
+.news h2:last-of-type {
+    margin-top: 55px;
+}
+
+.news h5 {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.news .news-block {
+    height: 300px;
+    margin-bottom: 28px;
+}
+
+.reviews {
+    background-image: url('../img/bg-comment.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+    line-height: 1.6;
+}
+
+.reviews .review {
+    height: 280px;
+}
+
+.reviews .user {
+    font-family: "IzhitsaCRegular";
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 17px;
+    padding-top: 15px;
+}
+
+.reviews div.circle-avatar {
+    max-width: 100%;
+    width: 37%;
+    padding-top: 37%;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+}
+.call-back form {
+	margin-top: -10px;
+}
+.call-back form img {
+	width: 18%;
+	margin-right: 15px;
+}
+
+.call-back form input {
+	width: 14%;
+    margin-right: 20px;
+    padding: 10px;
+    font-size: 10px;
+}
+
+footer .nav-justified {
+    width: 100%;
+    margin-left: 0;
+}
+
+footer nav .nav-item {
+    vertical-align: top;
+    border-right: 1px solid #a91521 !important;
+}
+
+footer nav .nav-item:last-of-type {
+    border-right: none !important;
+}
+
+footer nav .nav-link {
+    color: #a91521;
+    font-family: "IzhitsaCRegular";
+}
+
+footer #bird {
+    position: absolute;
+}
+
+.footer-info {
+    background: #a91521;
+    color: #fff;
+    padding: 70px 0;
+}
+
+.footer-info h3 {
+    font-family: "IzhitsaCRegular";
+    font-size: 22px;
+}
+
+.footer-info a,
+.footer-info a:hover {
+    color: #fff;
+}
+
+.footer-info i {
+    margin: 10px 0;
+    padding-right: 15px;
+}
+
+footer form {
+    position: absolute;
+    top: 25%;
+}
+
+footer form input {
+    width: 100%;
+    color: #d1d1d1;
+    border: 3px solid #d1d1d1;
+    margin-bottom: 5px;
+    padding: 3px 5px;
+    background: transparent;
+}
+
+footer form button {
+    padding 5px;
+    width: 100%;
+    color: #000;
+    background: #fff;
+    border: 1px solid #fff;
+    margin-top: 10px;
+}
+
+footer a > img {
+    max-width: 100%;
+}
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
