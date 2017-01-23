@@ -10,6 +10,7 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body>
@@ -75,9 +76,9 @@
                     <div class="col-md-10 offset-md-1">
                         <h2>О гостевом доме &laquoСамовар&raquo</h2>
                         <div class="first-letter">В село Ленино, нами построен Красивый дизайнерский сад, гостевой дом «Зеленый Квартал» ,трех этажном доме, в котором одновременно можно разместить 40 человек туристов с комфортным ночлегом , душем и питанием. На территории сада есть спортивная площадка 150 кв.м , баня с бассейном, красивые места для отдыха. Гостевой дом находится в село Ленино, недалеко от «Романовской игрушки».</div>
-                        <form action="" class="form-inline">
-                            <input type="date" placeholder="Заезд">
-                            <input type="date" placeholder="Выезд">
+                        <form class="form-inline">
+                            <input type="text" placeholder="&#xf073; Заезд" required class="ffFontAwesome">
+                            <input type="text" placeholder="&#xf073; Выезд" class="ffFontAwesome" required>
                             <button class="main-button text-uppercase">Забронировать</button>
                         </form>
                         <h2>Рады Вам предложить</h2>
@@ -124,10 +125,10 @@
                         <div id="carousel3" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner" role="listbox">
                                 <div class="carousel-item active">
-                                    <img class="d-block img-fluid" src="img/bath.png" alt="">
+                                    <img class="d-block img-fluid" src="img/wedding.png" alt="">
                                 </div>
                                 <div class="carousel-item">
-                                    <img class="d-block img-fluid" src="img/bath.png" alt="">
+                                    <img class="d-block img-fluid" src="img/wedding.png" alt="">
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carousel3" role="button" data-slide="prev">
@@ -355,13 +356,17 @@
                 <h2>У вас остались вопросы? Мы перезвоним</h2>
                 <form class="form-inline">
                     <img src="img/question-telephone.png" alt="Telephone">
-                    <input type="text" placeholder="Ваше имя">
-                    <input type="text" placeholder="Номер телефона">
-                    <input type="text" placeholder="Удобное время для звонка">
+                    <input type="text" placeholder="Ваше имя" minlength="3" maxlength="15" required>
+                    <input type="text" placeholder="Номер телефона" required>
+                    <input type="text" onfocus="(this.type='time')" onblur="(this.type='text')" placeholder="Удобное время для звонка" required>
                     <button class="main-button text-uppercase">Заказать звонок</button>
                 </form>
                 <h2>Как нас найти</h2>
             </div>
+        </section>
+        <section class="map">
+            <img src="img/bg-header.png">
+            <div id="map" style="width:100%; height:500px;"></div>
         </section>
     </main>
     <footer>
@@ -395,9 +400,9 @@
                         <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
                     </div>
                     <div class="col-xs-6 col-sm-4 col-md-3">
-                        <form> 
-                            <input type="date" placeholder="Заезд">
-                            <input type="date" placeholder="Выезд">
+                        <form>
+                            <input type="text" placeholder="&#xf073; Заезд" class="ffFontAwesome" required>
+                            <input type="text" placeholder="&#xf073; Выезд" class="ffFontAwesome" required>
                             <button class="text-uppercase">Забронировать</button>
                         </form>
                     </div>
@@ -412,8 +417,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous" "></script>
+    <script>
+    // settings carousel Bootstrap
+        $('.carousel').carousel({
+          interval: 4000,
+          pause: 'hover'
+        });
+    // settings for change type and display FontAwesome in placeholder
+        $('.ffFontAwesome').focus(function() {
+          this.type='date';
+        });
+        $('.ffFontAwesome').blur(function() {
+          this.type='text';
+        });
+    </script>
     <!--Scripts for cross-->
     <script src="js/prefixfree.min.js "></script>
+    <!--Scripts for map-->
+    <script src="js/mapYandex.js"></script>
 </body>
-
 </html>

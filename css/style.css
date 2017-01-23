@@ -172,6 +172,16 @@ button.main-button {
     padding: 5px 10px;
     background: #a91521;
     border: 1px solid #a91521;
+    transition: all 0.5s ease 0s;
+}
+
+input.ffFontAwesome {
+	font-family: 'FontAwesome';
+}
+
+button.main-button:hover {
+	background: #fcf247;
+	border: 1px solid #fcf247;
 }
 
 .about-us div.first-letter {
@@ -376,13 +386,21 @@ button.main-button {
 .call-back form input {
     width: 14%;
     margin-right: 20px;
-    padding: 10px;
-    font-size: 10px;
+    padding: 5px;
+    border: 1px solid #787171;
+}
+
+.map img {
+	position: relative;
+    top: 20px;
+    max-width: 100%;
+    z-index: 100;
 }
 
 footer .nav-justified {
     width: 100%;
     margin-left: 0;
+    margin: 10px 0;
 }
 
 footer nav .nav-item {
@@ -445,6 +463,12 @@ footer form button {
     background: #fff;
     border: 1px solid #fff;
     margin-top: 10px;
+}
+
+footer form button:hover {
+	color: #fff;
+	background: transparent;
+	transition: all 0.3s ease 0s;
 }
 
 footer a > img {
