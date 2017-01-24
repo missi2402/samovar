@@ -6,6 +6,9 @@
     font-weight: normal;
 }
 
+
+/* Header styles*/
+
 header,
 main h2 {
     font-family: "IzhitsaCRegular";
@@ -41,14 +44,14 @@ header form {
 .contacts {
     position: absolute;
     top: 45px;
-    right: 12%;
+    margin-left: 71%;
     z-index: 10;
     color: #000;
     background: url(../img/bg-contacts-header.png) no-repeat;
     background-size: cover;
     border-radius: 15px;
-    padding: 37px 34px;
-    line-height: 1.75;
+    padding: 2vw 1.7vw;
+    line-height: 2;
 }
 
 .contacts a,
@@ -70,7 +73,7 @@ header form {
 
 .nav-justified {
     padding-right: 0 !important;
-    width: 46%;
+    width: 45.5%;
     margin-left: 27%;
 }
 
@@ -87,9 +90,11 @@ header form {
 header .nav-justified .nav-link {
     padding: 20px 0;
     color: #fff;
+    font-size: .93vw;
 }
 
-.nav-justified .nav-link:hover {
+.nav-justified .nav-link:hover,
+.nav-justified .nav-link-active {
     text-decoration: underline;
 }
 
@@ -114,18 +119,23 @@ header .nav-justified .nav-link {
     font-size: 20px;
 }
 
+.carousel-inner>.carousel-item>a>img,
+.carousel-inner>.carousel-item>img {
+    width: 100%;
+}
+
 .carousel-control-next img,
 .carousel-control-prev img {
     position: absolute;
-    width: 70px;
-    height: 70px;
-    top: 45%;
-    left: 20px;
+    width: 80px;
+    height: 80px;
+    top: 44%;
+    left: 0px;
 }
 
 .carousel-control-next img {
     left: auto;
-    right: 20px;
+    right: 0px;
     transform: rotate(180deg);
 }
 
@@ -133,9 +143,9 @@ header .nav-justified .nav-link {
     background: rgba(232, 232, 232, .8);
     border-radius: 5px;
     color: #e11c16;
-    font-size: 26px;
+    font-size: 1.5vw;
     position: absolute;
-    top: 45%;
+    top: 42.4%;
     left: 24%;
     width: 51%;
     padding: 37px 0;
@@ -160,10 +170,13 @@ header .nav-justified .nav-link {
     margin: auto !important;
 }
 
+
+/*Index styles*/
+
 main h2 {
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 6px;
+    padding-top: 60px;
+    padding-bottom: 6px;
     font-size: 27px;
 }
 
@@ -173,16 +186,20 @@ button.main-button {
     background: #a91521;
     border: 1px solid #a91521;
     transition: all 0.5s ease 0s;
+    cursor: pointer;
 }
 
 input.ffFontAwesome {
-	font-family: 'FontAwesome';
+    font-family: 'FontAwesome';
 }
 
 button.main-button:hover {
-	background: #fcf247;
-	border: 1px solid #fcf247;
+    background: #fcf247;
+    border: 1px solid #fcf247;
 }
+
+
+/*Main index.html styles*/
 
 .about-us div.first-letter {
     line-height: 1.6;
@@ -205,18 +222,22 @@ button.main-button:hover {
     width: 100%;
 }
 
-.about-us form {
+.about-us form,
+.rooms-and-prices form {
     margin-top: 50px;
     text-align: center;
 }
 
-.about-us form input {
+.about-us form input,
+.rooms-and-prices form input {
     width: 29%;
     border: 1px solid #787171;
     padding: 5px;
 }
 
-.proposal {
+.proposal,
+.rooms-and-prices,
+.room-page {
     background-image: url('../img/bg-hohloma.png');
     background-size: cover;
     margin-bottom: -10px;
@@ -260,7 +281,8 @@ button.main-button:hover {
     right: -20px;
 }
 
-.proposal .carousel-inner {
+.proposal .carousel-inner,
+.room {
     border-image: url(../img/main-slider-border.png);
     border-style: solid;
     border-width: 30px;
@@ -320,26 +342,40 @@ button.main-button:hover {
     right: 18%;
 }
 
-.news {
+.photo-house .carousel-control-next img,
+.photo-house .carousel-control-prev img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 20px;
+    top: 44%;
+}
+
+.photo-house .carousel-control-next img {
+    left: auto;
+    right: 20px;
+    transform: rotate(180deg);
+}
+
+.news, .room-services {
     background-image: url('../img/bg-hohloma-2.png');
     background-size: cover;
 }
 
 .news h2 {
-    margin-bottom: 25px;
+    padding-bottom: 25px;
 }
 
 .news h2:last-of-type {
-    margin-top: 55px;
+    padding-top: 55px;
 }
 
 .news h5 {
     font-weight: bold;
-    margin: 10px 0;
+    padding: 10px 0;
 }
 
 .news .news-block {
-    height: 300px;
     margin-bottom: 28px;
 }
 
@@ -349,10 +385,6 @@ button.main-button:hover {
     background-size: cover;
     padding: 40px 0;
     line-height: 1.6;
-}
-
-.reviews .review {
-    height: 280px;
 }
 
 .reviews .user {
@@ -391,10 +423,17 @@ button.main-button:hover {
 }
 
 .map img {
-	position: relative;
+    position: relative;
     top: 20px;
     max-width: 100%;
     z-index: 100;
+}
+
+
+/* Footer styles */
+
+footer {
+    position: relative;
 }
 
 footer .nav-justified {
@@ -419,6 +458,8 @@ footer nav .nav-link {
 
 footer #bird {
     position: absolute;
+    top: -30px;
+    width: 13%;
 }
 
 .footer-info {
@@ -443,8 +484,7 @@ footer #bird {
 }
 
 footer form {
-    position: absolute;
-    top: 25%;
+    margin-top: 15%;
 }
 
 footer form input {
@@ -466,20 +506,225 @@ footer form button {
 }
 
 footer form button:hover {
-	color: #fff;
-	background: transparent;
-	transition: all 0.3s ease 0s;
+    color: #fff;
+    background: transparent;
+    transition: all 0.3s ease 0s;
 }
 
 footer a > img {
     max-width: 100%;
 }
 
-.row-eq-height {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+
+/* Rooms and prices styles*/
+
+main .rooms-and-prices h2 {
+    padding-top: 45px;
+    padding-bottom: 20px;
+}
+
+.rooms-and-prices form input {
+    width: 22.1%;
+    margin-right: 25px;
+}
+
+.rooms-and-prices form {
+    margin-top: 15px;
+    margin-bottom: 60px;
+}
+
+.room {
+    padding: 0 !important;
+    margin-bottom: 15px;
+    border-width: 20px;
+}
+
+.room-name {
+    position: absolute;
+    bottom: 15px;
+    height: 40px;
+    background: #eaedf2;
+    margin: 0 10px;
+    width: 94%;
+    text-align: center;
+    line-height: 1;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.room-name div:first-of-type {
+    width: 65%;
+    float: left;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+.room-name .price {
+    width: 35%;
+    float: left;
+    color: #a91521;
+    font-size: 12px;
+}
+
+.room-name .price span {
+    font-size: 25px;
+}
+
+.hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+
+.hovereffect .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    -webkit-transform: translate(460px, -100px) rotate(180deg);
+    -ms-transform: translate(460px, -100px) rotate(180deg);
+    transform: translate(460px, -100px) rotate(180deg);
+    -webkit-transition: all 0.7s 0.4s ease-in-out;
+    transition: all 0.5s 0.7s ease-in-out;
+}
+
+.hovereffect img {
+    display: block;
+    width: 100%;
+    position: relative;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+}
+
+.overlay .room-name {
+    position: initial;
+    background: #fff;
+    margin: 10px 0;
+}
+
+.hovereffect .center img {
+    margin: 10px auto;
+    width: auto;
+}
+
+.hovereffect .center {
+    margin: 10px 0;
+    -webkit-transform: translateY(-200px);
+    -ms-transform: translateY(-200px);
+    transform: translateY(-200px);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.hovereffect:hover .overlay {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+}
+
+.hovereffect:hover .center {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+
+/* Room.html*/
+
+main .room-page h2 {
+    padding-top: 42px;
+    padding-bottom: 30px;
+}
+
+.room-page .carousel-control-next img,
+.room-page .carousel-control-prev img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 41%;
+    right: 5%;
+}
+
+.room-page .carousel-control-prev img {
+    right: auto;
+    left: 5%;
+}
+
+.room-page .price-room {
+    color: #a91521;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.room-page form h2 {
+    padding: 0;
+}
+
+.room-page input,
+.room-page button {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.room-description p {
+    line-height: 1.7;
+    text-indent: 60px;
+    margin-bottom: 0;
+}
+
+.room-description h2 {
+    padding-bottom: 7px !important;
+}
+
+.room-services h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.room-services ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.room-services ul li > img {
+    width: 30px;
+    margin-bottom: 15px;
+    margin-right: 13px;
+}
+
+@media (max-width: 992px) {
+    .nav-justified {
+        width: 70%;
+        margin-left: 15%;
+    }
+    .company-name nav > a > img {
+        left: 4%;
+    }
+    header .nav-justified .nav-link {
+        font-size: 12px;
+    }
+    .FAQ img:first-of-type {
+        left: 10%;
+        width: 50px;
+    }
+    .FAQ img:nth-of-type(2) {
+        right: 10%;
+        width: 50px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -490,15 +735,60 @@ footer a > img {
         top: 10px;
         z-index: 1030;
     }
+    .company-name {
+        background-size: contain;
+    }
     .company-name nav > a > img {
-        position: absolute;
         top: -10px;
         left: auto;
         right: 0px;
+        max-height: 125%;
     }
     .company-name h1 {
         margin-top: 130px;
         padding-bottom: 100px;
         margin-bottom: 0;
+    }
+    .carousel-control-next img,
+    .carousel-control-prev img {
+        width: 50px;
+        height: 50px;
+        top: 40%;
+    }
+    .call-back form input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .call-back form button {
+        display: block;
+        margin: 0 auto;
+    }
+    footer nav .nav-item {
+        border-right: none !important;
+    }
+    footer form {
+        position: relative;
+    }
+    .rooms-and-prices form input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-us form input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .company-name h1 {
+        padding-bottom: 40px;
+    }
+    button.main-button {
+        width: 100%;
+    }
+    .proposal h3 {
+        margin: 25px 0;
     }
 }
