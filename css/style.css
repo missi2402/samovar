@@ -36,12 +36,12 @@ header form {
 
 .company-name h1 {
     text-align: center;
-    margin-top: 47px;
-    margin-bottom: 37px;
+    margin: 45px 0;
     font-size: 32px;
 }
 
-.contacts {
+.contacts,
+.contacts-page {
     position: absolute;
     top: 45px;
     margin-left: 71%;
@@ -54,17 +54,28 @@ header form {
     line-height: 2;
 }
 
+.contacts-page {
+    background: transparent;
+    position: relative;
+    margin-left: auto;
+    top: auto;
+}
+
 .contacts a,
-.contacts a:hover {
+.contacts-page a,
+.contacts a:hover,
+.contacts-page a:hover {
     color: #000;
 }
 
-.contacts i {
+.contacts i,
+.contacts-page i {
     color: #a91521;
     margin-right: 5px;
 }
 
-.contacts a:hover {
+.contacts a:hover,
+.contacts-page a:hover {
     text-decoration: underline;
 }
 
@@ -119,21 +130,35 @@ header .nav-justified .nav-link {
     font-size: 20px;
 }
 
+header .carousel-inner>.carousel-item {
+    height: 47vw;
+}
+
 .carousel-inner>.carousel-item>a>img,
 .carousel-inner>.carousel-item>img {
     width: 100%;
 }
 
-.carousel-control-next img,
-.carousel-control-prev img {
+.carousel-control-next,
+.carousel-control-prev {
     position: absolute;
-    width: 80px;
-    height: 80px;
-    top: 44%;
+    width: 50px;
+    height: 50px;
+    top: 46%;
     left: 0px;
+    background-image: url('../img/slider-arrow-left.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: .7s;
 }
 
-.carousel-control-next img {
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+    transition: .7s;
+    background-image: url('../img/slider-arrow-left-hover.png');
+}
+
+.carousel-control-next {
     left: auto;
     right: 0px;
     transform: rotate(180deg);
@@ -147,9 +172,11 @@ header .nav-justified .nav-link {
     position: absolute;
     top: 42.4%;
     left: 24%;
+    bottom: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 51%;
     padding: 37px 0;
-    height: 100px;
 }
 
 .carousel-indicators {
@@ -194,6 +221,7 @@ input.ffFontAwesome {
 }
 
 button.main-button:hover {
+    color: #000;
     background: #fcf247;
     border: 1px solid #fcf247;
 }
@@ -204,6 +232,11 @@ button.main-button:hover {
 .about-us div.first-letter {
     line-height: 1.6;
     margin-top: 25px;
+}
+
+.about-us div.first-letter > p,
+main p {
+    margin-bottom: 5px !important;
 }
 
 .about-us div.first-letter::first-letter {
@@ -237,15 +270,26 @@ button.main-button:hover {
 
 .proposal,
 .rooms-and-prices,
-.room-page {
+.room-page,
+main.hoh-backgr {
     background-image: url('../img/bg-hohloma.png');
     background-size: cover;
     margin-bottom: -10px;
 }
 
+main.hoh-backgr > section > div > section {
+    background-image: none;
+}
+/* slider height */
+.hoh-backgr .proposal .carousel-inner>.carousel-item {
+    height: 37vw;
+    overflow: hidden;
+}
+
 .proposal a,
 .proposal a:hover {
     color: #000;
+    white-space: nowrap;
 }
 
 .proposal a:hover {
@@ -274,6 +318,17 @@ button.main-button:hover {
     left: -20px;
     color: rgb(0, 0, 0);
     font-size: 35px;
+    background-image: none;
+    transition: 1s;
+    width: inherit;
+    height: initial;
+    transform: none;
+}
+
+.proposal .carousel-control-next:hover i,
+.proposal .carousel-control-prev:hover i {
+    color: #f6cf40;
+    transition: 1s;
 }
 
 .proposal .carousel-control-next {
@@ -290,6 +345,13 @@ button.main-button:hover {
     -webkit-border-image: url(../img/border-test.png) 30 round;
     -o-border-image: url(../img/border-test.png) 30 round;
     border-image: url(../img/border-test.png) 30 round;
+}
+
+@media (min-width: 768px) {
+	/* slider height */
+	.proposal .carousel-inner {
+		height: 19vw;
+	}
 }
 
 .FAQ h2 {
@@ -357,7 +419,8 @@ button.main-button:hover {
     transform: rotate(180deg);
 }
 
-.news, .room-services {
+.news,
+.room-services {
     background-image: url('../img/bg-hohloma-2.png');
     background-size: cover;
 }
@@ -499,15 +562,15 @@ footer form input {
 footer form button {
     padding 5px;
     width: 100%;
-    color: #000;
-    background: #fff;
-    border: 1px solid #fff;
+    color: #000 !important;
+    background: #fff !important;
+    border: 1px solid #fff !important;
     margin-top: 10px;
 }
 
 footer form button:hover {
-    color: #fff;
-    background: transparent;
+    color: #fff!important;
+    background: transparent!important;
     transition: all 0.3s ease 0s;
 }
 
@@ -599,6 +662,7 @@ main .rooms-and-prices h2 {
 .hovereffect img {
     display: block;
     width: 100%;
+    height: 100%;
     position: relative;
     -webkit-transition: all 0.4s ease-in;
     transition: all 0.4s ease-in;
@@ -700,10 +764,22 @@ main .room-page h2 {
     list-style: none;
 }
 
+.room-services ul li {
+    display: flex;
+    line-height: 2.2;
+}
+
 .room-services ul li > img {
     width: 30px;
+    height: 30px;
     margin-bottom: 15px;
     margin-right: 13px;
+    transition: 0.9s;
+}
+
+.room-services ul li:hover > img {
+    transition: 0.9s;
+    transform: rotateY(180deg);
 }
 
 @media (max-width: 992px) {
@@ -791,4 +867,52 @@ main .room-page h2 {
     .proposal h3 {
         margin: 25px 0;
     }
+}
+
+#slider-with-rooms {
+    margin-bottom: 100px;
+}
+
+#slider-with-rooms .room-name {
+    bottom: 40px;
+    margin: 0 45px;
+    width: 69%;
+    color: #000;
+}
+#slider-with-rooms .carousel-control-next,
+#slider-with-rooms .carousel-control-prev {
+    top: 36%;
+}
+
+#slider-with-rooms .carousel-item a > img {
+    border-image: url(../img/main-slider-border.png);
+    border-style: solid;
+    border-width: 20px;
+    -moz-border-image: url(../img/border-test.png) 30 round;
+    -webkit-border-image: url(../img/border-test.png) 30 round;
+    -o-border-image: url(../img/border-test.png) 30 round;
+    border-image: url(../img/border-test.png) 30 round;
+}
+
+
+/* single slide at once */
+
+#slider-with-rooms .carousel-inner .active.left {
+    left: -33% !important;
+}
+
+#slider-with-rooms .carousel-inner .next {
+    left: 33% !important;
+}
+
+#slider-with-rooms .carousel-inner .prev {
+    left: -33% !important;
+}
+
+#slider-with-rooms .carousel-item.active.left > div:not(:first-child) {
+    display: none !important;
+}
+
+#slider-with-rooms .carousel-item.active.right > div:not(:first-child) {
+    display: none !important;
 }
